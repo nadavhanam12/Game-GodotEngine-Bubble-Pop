@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/shooter_body.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/level_1.gd" type="Script" id=5]
+[ext_resource path="res://art/shooter/shooter.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/border.gd" type="Script" id=7]
+[ext_resource path="res://font/remain_balls_font.tres" type="DynamicFont" id=9]
+
+[sub_resource type="SegmentShape2D" id=1]
+
+[sub_resource type="SegmentShape2D" id=2]
+
+[node name="level_1" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_right = 574.0
+margin_bottom = 1030.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shooter" type="Sprite" parent="."]
+position = Vector2( 288, 832 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="shooter_position" type="Position2D" parent="Shooter"]
+
+[node name="remain_balls" type="Label" parent="Shooter"]
+margin_left = -128.0
+margin_top = 32.0
+margin_right = -32.0
+margin_bottom = 94.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shooter_texture" type="Sprite" parent="Shooter"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+
+[node name="swap" type="TextureButton" parent="Shooter"]
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left_border" type="StaticBody2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_border"]
+scale = Vector2( 1, 1024 )
+shape = SubResource( 1 )
+
+[node name="right_border" type="StaticBody2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_border"]
+position = Vector2( 576, 0 )
+scale = Vector2( 1, 1024 )
+shape = SubResource( 2 )
+
+[connection signal="pressed" from="Shooter/swap" to="Shooter" method="swap"]

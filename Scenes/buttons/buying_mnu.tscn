@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://art/Buttons and background/pause_big.png" type="Texture" id=1]
+[ext_resource path="res://font/my_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://art/Buttons and background/lightning.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/btn/buying_mnu.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/buttons/yes.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/buttons/no.gd" type="Script" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="pause_back" type="TextureRect" parent="."]
+margin_left = 32.0
+margin_top = 160.0
+margin_right = 511.0
+margin_bottom = 830.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy_before" type="TextureRect" parent="."]
+margin_left = 352.0
+margin_top = 352.0
+margin_right = 480.0
+margin_bottom = 448.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ball_image" type="TextureRect" parent="."]
+margin_left = 352.0
+margin_top = 576.0
+margin_right = 447.0
+margin_bottom = 672.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yes" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 640.0
+margin_right = 288.0
+margin_bottom = 704.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hell Yea !"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="Button" parent="."]
+margin_left = 288.0
+margin_top = 704.0
+margin_right = 448.0
+margin_bottom = 768.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = ":("
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 512.0
+margin_right = 455.0
+margin_bottom = 574.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PURCHASE ITEM ?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

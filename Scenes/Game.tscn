@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/buttons/down_mnu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/game.gd" type="Script" id=4]
+
+[node name="game_window" type="Node2D"]
+script = ExtResource( 4 )
+random_bubbles_to_pop_precent = 100
+random_percent_specials = 30
+random_width = 6
+random_height = 5
+
+[node name="menu" parent="." instance=ExtResource( 1 )]

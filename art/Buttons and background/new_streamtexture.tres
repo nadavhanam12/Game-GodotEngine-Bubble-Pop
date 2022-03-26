@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/rainbow.png-d9df9d0770795996b5b56a40207c97b1.stex"

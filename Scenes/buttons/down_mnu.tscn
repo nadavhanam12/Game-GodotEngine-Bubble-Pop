@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/btn/pause_btn.gd" type="Script" id=1]
+[ext_resource path="res://art/Buttons and background/pause1.png" type="Texture" id=2]
+[ext_resource path="res://art/Buttons and background/pressed/pause1.png" type="Texture" id=3]
+[ext_resource path="res://art/Buttons and background/new_streamtexture2.tres" type="Texture" id=4]
+[ext_resource path="res://art/Buttons and background/dow_mnu.png" type="Texture" id=5]
+[ext_resource path="res://art/Buttons and background/lightning.png" type="Texture" id=6]
+[ext_resource path="res://art/Buttons and background/rainbow.png" type="Texture" id=7]
+[ext_resource path="res://art/Buttons and background/new_streamtexture.tres" type="Texture" id=8]
+[ext_resource path="res://Scripts/btn/rainbow_btn.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/btn/lightning_btn.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/buttons/down_mnu.gd" type="Script" id=11]
+[ext_resource path="res://font/my_font.tres" type="DynamicFont" id=12]
+[ext_resource path="res://art/Buttons and background/up_panel.png" type="Texture" id=13]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, 928 )
+script = ExtResource( 11 )
+
+[node name="down_background2" type="TextureRect" parent="."]
+margin_right = 576.0
+margin_bottom = 96.0
+texture = ExtResource( 5 )
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="up_background" type="TextureRect" parent="."]
+margin_top = -928.0
+margin_right = 576.0
+margin_bottom = -806.0
+texture = ExtResource( 13 )
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause_btn" type="TextureButton" parent="."]
+margin_left = 32.0
+margin_right = 128.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+stretch_mode = 6
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rainbow_btn" type="TextureButton" parent="."]
+margin_left = 480.0
+margin_top = 12.0
+margin_right = 547.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+stretch_mode = 6
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lightning_btn" type="TextureButton" parent="."]
+margin_left = 384.0
+margin_top = 12.0
+margin_right = 451.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 4 )
+stretch_mode = 6
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="."]
+margin_left = 32.0
+margin_top = -928.0
+margin_right = 174.0
+margin_bottom = -876.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stars" type="Label" parent="."]
+margin_left = 416.0
+margin_top = -928.0
+margin_right = 558.0
+margin_bottom = -876.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
